@@ -38,7 +38,7 @@ EXIT_VALUE=0
 
 function install_prerequisites
 {
-    gem install "${INSTALL_PACKAGE}"
+    gem install --silemnt "${INSTALL_PACKAGE}"
 
     VERSION=$(gem list | grep "^${INSTALL_PACKAGE} " | sed 's/[^0-9.]*\([0-9.]*\).*/\1/')
     BANNER="Scanning all ruby code with ${INSTALL_PACKAGE} (version: ${VERSION})"
