@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 
 This changelog was automatically generated using [Caretaker](https://github.com/DevelopersToolbox/caretaker) by [Wolf Software](https://github.com/WolfSoftware)
 
-### [v0.1.0](https://github.com/CICDToolbox/reek/releases/v0.1.0)
+### [Unreleased](https://github.com/CICDToolbox/reek/compare/v0.1.0...HEAD)
 
-> Released on June, 21st 2021
+- testing [`[head]`](https://github.com/CICDToolbox/reek/commit/)
 
-- The initial commit [`[head]`](https://github.com/CICDToolbox/reek/commit/)
+- The initial commit [`[0587705]`](https://github.com/CICDToolbox/reek/commit/0587705453f83c512e3f9e8bd609d2788c55e1e4)
 
