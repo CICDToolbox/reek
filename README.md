@@ -115,10 +115,3 @@ This allows us to pass in any file we identify and convince reek to honour the f
 
 If your ruby code fails to compile then reek will error but set the exit value to 0 causing the scanning to assume success. We have add an additional pre-test of `ruby -c` which tries to compile the ruby code first before moving onto the linting phase to cope with this.
 
-## Show Support
-
-<p>
-	<a href="https://ko-fi.com/wolfsoftware">
-		<img src="https://img.shields.io/badge/Ko%20Fi-blue?style=for-the-badge&logo=ko-fi&logoColor=white" />
-	</a>
-</p>
