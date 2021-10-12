@@ -1,40 +1,33 @@
-<h1 align="center">
-    <a href="https://github.com/WolfSoftware">
-        <img src="https://raw.githubusercontent.com/WolfSoftware/branding/master/images/general/banners/64/black-and-white.png" alt="Wolf Software Logo" />
+<p align="center">
+    <a href="https://github.com/CICDToolbox">
+        <img src="https://cdn.wolfsoftware.com/assets/images/github/organisations/cicdtoolbox/black-and-white-circle-256.png" alt="CICDToolbox Logo" />
     </a>
     <br />
-    Reek for CI/CD Pipelines
-</h1>
-
-<p align="center">
     <a href="https://github.com/CICDToolbox/reek/actions/workflows/pipeline.yml">
-        <img src="https://img.shields.io/github/workflow/status/CICDToolbox/reek/pipeline/master?logo=github&logoColor=white&style=for-the-badge" alt="Github Build Status">
-    </a>
-    <a href="https://travis-ci.com/CICDToolbox/reek">
-        <img src="https://img.shields.io/travis/com/CICDToolbox/reek/master?style=for-the-badge&logo=travis" alt="Travis Build Status">
+        <img src="https://img.shields.io/github/workflow/status/CICDToolbox/reek/pipeline/master?style=for-the-badge" alt="Github Build Status">
     </a>
     <a href="https://github.com/CICDToolbox/reek/releases/latest">
-        <img src="https://img.shields.io/github/v/release/CICDToolbox/reek?color=blue&style=for-the-badge&logo=github&logoColor=white&label=Latest%20Release" alt="Release">
+        <img src="https://img.shields.io/github/v/release/CICDToolbox/reek?color=blue&label=Latest%20Release&style=for-the-badge" alt="Release">
     </a>
     <a href="https://github.com/CICDToolbox/reek/releases/latest">
-        <img src="https://img.shields.io/github/commits-since/CICDToolbox/reek/latest.svg?color=blue&style=for-the-badge&logo=github&logoColor=white" alt="Commits since release">
+        <img src="https://img.shields.io/github/commits-since/CICDToolbox/reek/latest.svg?color=blue&style=for-the-badge" alt="Commits since release">
     </a>
-    <br>
+    <br />
     <a href=".github/CODE_OF_CONDUCT.md">
-        <img src="https://img.shields.io/badge/Code%20of%20Conduct-blue?style=for-the-badge&logo=read-the-docs&logoColor=white" />
+        <img src="https://img.shields.io/badge/Code%20of%20Conduct-blue?style=for-the-badge" />
     </a>
     <a href=".github/CONTRIBUTING.md">
-        <img src="https://img.shields.io/badge/Contributing-blue?style=for-the-badge&logo=read-the-docs&logoColor=white" />
+        <img src="https://img.shields.io/badge/Contributing-blue?style=for-the-badge" />
     </a>
     <a href=".github/SECURITY.md">
-        <img src="https://img.shields.io/badge/Report%20Security%20Concern-blue?style=for-the-badge&logo=read-the-docs&logoColor=white" />
+        <img src="https://img.shields.io/badge/Report%20Security%20Concern-blue?style=for-the-badge" />
     </a>
     <a href="https://github.com/CICDToolbox/reek/issues">
-        <img src="https://img.shields.io/badge/Get%20Support-blue?style=for-the-badge&logo=read-the-docs&logoColor=white" />
+        <img src="https://img.shields.io/badge/Get%20Support-blue?style=for-the-badge" />
     </a>
-    <br>
-    <a href="https://github.com/TGWolf">
-        <img src="https://img.shields.io/badge/Created%20by%20Wolf-black?style=for-the-badge" />
+    <br />
+    <a href="https://wolfsoftware.com">
+        <img src="https://img.shields.io/badge/Created%20by%20Wolf%20Software-blue?style=for-the-badge" />
     </a>
 </p>
 
@@ -42,11 +35,9 @@
 
 A tool to check your Ruby code for code smells in CI/CD pipelines using [reek](https://rubygems.org/gems/reek).
 
-This tool has been written and tested using both GitHub Actions and Travis CI, but it should work out of the box with a lot of other CI/CD tools.
+This tool has been written and tested using GitHub Actions but it should work out of the box with a lot of other CI/CD tools.
 
 ## Usage
-
-### GitHub Actions
 
 ```yml
 on: [push, pull_request]
@@ -59,31 +50,20 @@ jobs:
       with:
         ruby-version: 3.0
     - name: Run Reek
-      run: wget --quiet -O - https://raw.githubusercontent.com/CICDToolbox/reek/master/pipeline.sh | bash
-```
-
-### Travis CI
-
-```yml
-language: ruby
-rvm: 3.0
-
-script:
-  - wget --quiet -O - https://raw.githubusercontent.com/CICDToolbox/reek/master/pipeline.sh | bash
+      run: bash <(curl -s https://raw.githubusercontent.com/CICDToolbox/reek/master/pipeline.sh)
 ```
 
 ### Other Options
 
 The following environment variables can be set in order to customise the script.
 
-| Name          | Purpose |
-| ------------- | ------- |
-| REPORT_ONLY   | Generate the report but do not fail the build even if an error occurred. |
-| SHOW_ERRORS   | Show the actual errors instead of just which files had errors. |
+| Name          | Purpose | Default Value |
+| ------------- | ------- | ------------- |
+| EXCLUDE_FILES | A comma separated list of files to exclude from being scanned. | Unset |
+| REPORT_ONLY   | Generate the report but do not fail the build even if an error occurred. | False | 
+| SHOW_ERRORS   | Show the actual errors instead of just which files had errors. | False | 
 
 You can use any combination of the above settings.
-
-#### GitHub Actions
 
 ```yml
 on: [push, pull_request]
@@ -99,21 +79,7 @@ jobs:
       env:
         REPORT_ONLY: true
         SHOW_ERRORS: true
-      run: wget --quiet -O - https://raw.githubusercontent.com/CICDToolbox/reek/master/pipeline.sh | bash
-```
-
-#### Travis CI
-
-```yml
-language: ruby
-rvm: 3.0
-
-env:
-  - REPORT_ONLY=true
-  - SHOW_ERRORS=true
-
-script:
-  - wget --quiet -O - https://raw.githubusercontent.com/CICDToolbox/reek/master/pipeline.sh | bash
+      run: bash <(curl -s https://raw.githubusercontent.com/CICDToolbox/reek/master/pipeline.sh)
 ```
 
 ## Example Output
@@ -121,14 +87,6 @@ script:
 This is an example of the output report generated by this tool, this is the actual output from the tool running against itself.
 
 ```
---------------------------------------------------------------------------------
-               Scanning all ruby code with reek (version: 6.0.4)
---------------------------------------------------------------------------------
- [  OK  ] Processing successful for tests/test-no-extension
- [  OK  ] Processing successful for tests/test.rb
---------------------------------------------------------------------------------
-                     Total: 2, OK: 2, Failed: 0, Skipped: 0
---------------------------------------------------------------------------------
 ```
 
 ## File Identification
