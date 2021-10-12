@@ -7,7 +7,9 @@ This changelog was automatically generated using [Caretaker](https://github.com/
 
 ### [Unreleased](https://github.com/CICDToolbox/reek/compare/v0.1.0...HEAD)
 
-- update [`[head]`](https://github.com/CICDToolbox/reek/commit/)
+- New logo [`[head]`](https://github.com/CICDToolbox/reek/commit/)
+
+- update [`[5fb7ca8]`](https://github.com/CICDToolbox/reek/commit/5fb7ca8c27b014c6c19bf5c75fcc447efcb8878a)
 
 - update [`[1da7f50]`](https://github.com/CICDToolbox/reek/commit/1da7f5023b0fb40b4c6b3865349c77497d50adbb)
 
