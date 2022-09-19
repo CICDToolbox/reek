@@ -7,7 +7,9 @@ This changelog was automatically generated using [Caretaker](https://github.com/
 
 ### [Unreleased](https://github.com/CICDToolbox/reek/compare/v0.1.0...HEAD)
 
-- Fix find command [`[head]`](https://github.com/CICDToolbox/reek/commit/)
+- Make errors easier to see and default to showing errors [`[head]`](https://github.com/CICDToolbox/reek/commit/)
+
+- Fix find command [`[538eef8]`](https://github.com/CICDToolbox/reek/commit/538eef8224515f5460d4816824e9559ce2a40b82)
 
 - Fix find command [`[a7e8d04]`](https://github.com/CICDToolbox/reek/commit/a7e8d042f9a4b15a954c4d46bd71a1af82acb968)
 
