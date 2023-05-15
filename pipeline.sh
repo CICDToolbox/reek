@@ -172,7 +172,7 @@ function handle_parameters
 
     if [[ -n "${SHOW_SKIPPED-}" ]] && [[ "${SHOW_SKIPPED}" = true ]]; then
         SHOW_SKIPPED=true
-        echo " Show skipped: false"
+        echo " Show skipped: true"
         parameters=true
     else
         SHOW_SKIPPED=false

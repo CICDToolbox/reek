@@ -7,7 +7,9 @@ This changelog was automatically generated using [Caretaker](https://github.com/
 
 ### [Unreleased](https://github.com/CICDToolbox/reek/compare/v0.1.0...HEAD)
 
-- Change the logic for skipping and showing skipped files [`[head]`](https://github.com/CICDToolbox/reek/commit/)
+- Fix [`[head]`](https://github.com/CICDToolbox/reek/commit/)
+
+- Change the logic for skipping and showing skipped files [`[719782c]`](https://github.com/CICDToolbox/reek/commit/719782c0c7b31d9844198da8db450144819f458d)
 
 - Make errors easier to see and default to showing errors [`[4fbfefd]`](https://github.com/CICDToolbox/reek/commit/4fbfefdfaca326d5d2a94dd4dc7098474fefb2ec)
 
